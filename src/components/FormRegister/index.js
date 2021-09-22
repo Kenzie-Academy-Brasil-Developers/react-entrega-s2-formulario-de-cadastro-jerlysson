@@ -63,7 +63,7 @@ function FormRegister() {
       </div>
       <div>
         <TextField
-          // type="password"
+          type="password"
           variant="outlined"
           label="Senha"
           margin="normal"
@@ -75,7 +75,7 @@ function FormRegister() {
       </div>
       <div>
         <TextField
-          // type="password"
+          type="password"
           variant="outlined"
           label="Confirme a Senha"
           margin="normal"
