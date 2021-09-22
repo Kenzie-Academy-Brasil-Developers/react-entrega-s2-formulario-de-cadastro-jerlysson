@@ -22,7 +22,7 @@ const schema = yup.object().shape({
     .oneOf([yup.ref("password"), "Senhas Devem Ser Iguais!"]),
 });
 
-function FormRegister({ setName }) {
+function FormRegister() {
   const history = useHistory();
   const {
     register,
@@ -34,7 +34,6 @@ function FormRegister({ setName }) {
 
   const signUp = (data) => {
     history.push(`/home/${data.name}`);
-    setName(data.name);
   };
 
   return (
@@ -63,7 +62,7 @@ function FormRegister({ setName }) {
       </div>
       <div>
         <TextField
-          type="password"
+          // type="password"
           variant="outlined"
           label="Senha"
           margin="normal"
@@ -75,7 +74,7 @@ function FormRegister({ setName }) {
       </div>
       <div>
         <TextField
-          type="password"
+          // type="password"
           variant="outlined"
           label="Confirme a Senha"
           margin="normal"
