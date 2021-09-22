@@ -15,11 +15,12 @@ const schema = yup.object().shape({
     .required("Campo Obrigatorio")
     .min(8, "Minimo 8 Caracteres")
     .matches(
-      /(?=^.{8,}$)((?=.*\d)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/
+      /(?=^.{8,}$)((?=.*\d)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/,
+      "Falta uma Maiuscula, Numero e Sinal"
     ),
   pwdComfirm: yup
     .string()
-    .oneOf([yup.ref("password"), "Senhas Devem Ser Iguais!"]),
+    .oneOf([yup.ref("password")], "Senhas Devem Ser Iguais!"),
 });
 
 function FormRegister() {
