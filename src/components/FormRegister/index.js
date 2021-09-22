@@ -41,6 +41,7 @@ function FormRegister({ setName }) {
     <form onSubmit={handleSubmit(signUp)}>
       <div>
         <TextField
+          variant="outlined"
           label="Nome"
           margin="normal"
           size="small"
@@ -51,6 +52,7 @@ function FormRegister({ setName }) {
       </div>
       <div>
         <TextField
+          variant="outlined"
           label="E-mail"
           margin="normal"
           size="small"
@@ -61,6 +63,8 @@ function FormRegister({ setName }) {
       </div>
       <div>
         <TextField
+          type="password"
+          variant="outlined"
           label="Senha"
           margin="normal"
           size="small"
@@ -71,6 +75,8 @@ function FormRegister({ setName }) {
       </div>
       <div>
         <TextField
+          type="password"
+          variant="outlined"
           label="Confirme a Senha"
           margin="normal"
           size="small"
